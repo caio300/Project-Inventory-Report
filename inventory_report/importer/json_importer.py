@@ -3,11 +3,12 @@ from .importer import Importer
 
 
 class JsonImporter(Importer):
-    def import_data(self, file_name):
-        if "json" in file_name:
-            with open(file_name) as file:
-                data = json.load(file)
+    def import_data(file_name):
+        if 'json' in file_name:
+            with open(file_name) as json_file:
+                data = json.load(json_file)
                 new_data = [row for row in data]
                 return new_data
         else:
-            raise ValueError("Erro! Arquivo inválido")
+            raise ValueError("Arquivo inválido")
+    pass
