@@ -37,8 +37,8 @@ def read_json(file_name):
         return new_data
 
 
-def read_xml(file_path):
-    with open(file_path) as file:
+def read_xml(file_name):
+    with open(file_name) as file:
         data = ET.parse(file)
         itemlist = data.getroot()
 
